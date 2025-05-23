@@ -61,3 +61,20 @@ for step in range(steps):
 
     if step % 100 == 0:
         print(f"{step}/{steps}")
+
+
+
+
+
+
+
+# velocity distributions
+v_mags = np.array(v_mags)
+plt.hist(v_mags, bins=50, density=True, alpha=0.7, label='Simulation')
+v = np.linspace(0, max(v_mags), 100)
+f_v = (np.sqrt(2 / np.pi) * v**2 / T**(3/2)) * np.exp(-v**2 / (2 * T))
+plt.plot(v, f_v, 'r-', label='Maxwell Distributin')
+plt.xlabel('Velocity (|v|)')
+plt.ylabel('Probability')
+plt.legend()
+plt.show()
