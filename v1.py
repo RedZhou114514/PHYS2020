@@ -40,6 +40,7 @@ positions_history = [positions.copy()]
 velocities_history = [velocities.copy()]
 potential_energy_history = []
 kinetic_energy_history = []
+v_mags = []
 for step in range(steps):
     forces, potential_energy = calculate_forces(positions)
     potential_energy_history.append(potential_energy)
@@ -56,19 +57,19 @@ for step in range(steps):
     velocities += 0.5 * (accelerations + new_accelerations) * dt
     kinetic_energy = 0.5 * np.sum(np.sum(velocities**2, axis=1))
     kinetic_energy_history.append(kinetic_energy)
-    positions_history.append(positions.copy())
-    velocities_history.append(velocities.copy())
+    if step > 200: 
+        v_mags.extend(np.linalg.norm(velocities, axis=1))
+    if step % 10 == 0:
+        positions_history.append(positions.copy())
+        velocities_history.append(velocities.copy())
 
     if step % 100 == 0:
         print(f"{step}/{steps}")
+        
+print("done")
 
 
 
-
-
-
-
-# velocity distributions
 v_mags = np.array(v_mags)
 plt.hist(v_mags, bins=50, density=True, alpha=0.7, label='Simulation')
 v = np.linspace(0, max(v_mags), 100)
