@@ -84,7 +84,7 @@ for step in range(steps):
     velocities *= scale_factor
 
     if step % 1000 == 0:
-        print(f"步数 {step}, 温度 {current_T:.3f}")
+        print(f"step {step}, temperature {current_T:.3f}")
     if step > 2000: 
         v_mags.extend(np.linalg.norm(velocities, axis=1))
     if step % 10 == 0:
