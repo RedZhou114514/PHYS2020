@@ -11,7 +11,7 @@ V = L ** 3
 n = N / V
 
 temperatures_to_simulate = np.arange(1.0, 10.1, 1.0)
-N_runs_per_T = 100
+N_runs_per_T = 50
 
 dt = 0.001
 steps = 10000
