@@ -91,7 +91,3 @@ The scripts will also print progress and final results (e.g., calculated $D$ val
 Portions of the Python code in this project, particularly related to algorithm implementation (such as lattice initialization, Berendsen thermostat application, Mean Squared Displacement calculation including trajectory unwrapping, and multi-run averaging logic), code optimization strategies with Numba, plotting enhancements (e.g., adaptive ticks, legend formatting), and debugging, were developed with the assistance of an AI programming assistant (Google Gemini). The core simulation concepts and physical models were based on established computational physics principles as outlined in the project's background.
 
 All AI-generated or AI-assisted code segments were carefully reviewed, understood, tested, and adapted by the author to ensure correctness and suitability for the project's objectives. The author remains fully responsible for the overall functionality and integrity of the simulations and the scientific interpretation of their results.
-
----
-
-Feel free to adjust any section to better reflect the specifics of your project or the emphasis you want to place. For example, you might want to list the exact parameter values you used for the figures in your report directly in the README or refer to the report for those details.
