@@ -137,6 +137,7 @@ if len(v_mags) > 0:
     plt.plot(v, f_v, 'r-', label=f'Maxwell Distribution (T={avg_T:.2f})')
     plt.xlabel('Velocity (|v|)')
     plt.ylabel('Probability')
+    plt.title('Velocity Distribution')
     plt.legend()
     plt.show()
 else:
